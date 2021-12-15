@@ -1,0 +1,218 @@
+body{
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+}
+.main-header{
+    background-color: rgba(0,52,91,255);
+}
+
+/* added inline block so the header div and the nav will be set in the same block (line). > = direct child*/
+.main-header > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.main-header__brand{
+    color: #0ea2f6;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 22px;
+}
+/* width of header - width of div.*/
+.main-nav{
+    display: inline-block;
+    text-align: right;
+    width: calc(100% - 74px);
+    vertical-align: middle;
+}
+
+/* got rid of margin and padding in order to reset width of main nav*/
+.mian-nav__item{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.main-nav__item {
+    display: inline-block;
+    margin: 0 16px;
+}
+
+.main-nav__item a{
+    text-decoration: none;
+    color: #f9f9f9;
+    font-weight: bold;
+    padding: 3px 0;
+}
+
+/*pseduo class*/
+.main-nav__item a:hover, .main-nav__item a:active {
+    color: #0ea2f6;
+    border-bottom: 2px solid black;
+}
+/*Start of Grid-style*/
+
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: #f9f9f9;
+}
+.main-header{
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+.wrapper .showcase{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    background-image: url('/images/banner-935470_1920.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    height: 350px;
+}
+.wrapper .showcase h1{
+    color: white;
+}
+.wrapper .showcase .text{
+    color: white;
+    font-size: 20px;
+    text-align: left;
+}
+.wrapper .about{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-image: url('/images/avatar-2191932_640.png');
+    background-repeat: no-repeat;
+    box-shadow: 10px 10px 5px #87bdd8;
+    text-align: center;
+    font-size: 30px;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    height: 550px;
+    padding: 0;
+}
+/*support icon*/
+.icon2{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-end: 4;
+    padding-left: 30px;
+}
+
+.font2{
+    font-size: 45px;
+}
+/*services Icon*/
+.icon3{
+    grid-column-start: 1;
+    grid-row-end: 5;
+    padding-left: 20px;
+}
+
+.font3{
+    font-size: 45px;
+}
+/*Our Goal Icon*/
+.icon4{
+    grid-column-start: 2;
+    grid-row-end: 5;
+    padding-left: 20px;
+}
+
+.font4{
+    font-size: 45px;
+}
+/*contact icon*/
+.icon5{
+    grid-column-start: 3;
+    grid-row-end: 4;
+    padding-left: 30px;
+    padding-top: 300px;
+}
+
+.font5{
+    font-size: 45px;
+}
+.man{
+    grid-column-start: 3;
+    grid-row-end: 5;
+    padding-left: 70px;
+}
+/*Product Table*/
+.products{
+    background-color: #f9f9f9;
+    box-shadow: 3px 3px #87bdd8, -1em 0 .4em #87bdd8;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 3; 
+    grid-row-end: 5;
+    line-height: 40px;
+}
+/*This is the main-footer*/
+.mainfoot{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    height: 200px;
+    font-size: 20px;
+    text-align: center;
+}
+.logo{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.iconic{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.mainfoot{
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+/*Media Queries*/
+@media screen and (max-width:700px) {
+    *{
+        box-sizing: border-box;
+    }
+   .about p{
+       font-size: 20px;
+   }
+}
+@media screen and (max-width:1024px) {
+    .main-header{
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+    .wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .showcase{
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+    .showcase h1{
+        text-align: left;
+    }
+    .showcase p{
+        font-size: 2px;
+    }
+    .about{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            background-repeat: no-repeat;
+            box-shadow: 10px 10px 5px #87bdd8;
+            text-align: center;
+            height: 60x;
+            padding: 0;
+        }
+    .about p{
+        font-size: 15px;
+    }
+    }
+ 
